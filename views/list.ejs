@@ -1,0 +1,25 @@
+<%- include("header.ejs"); -%>
+<body>
+    <div class="box" id="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+   
+    <div class="box">
+        <div class="item">
+            <div>
+                <% for(var i=0;i<newadd.length;i++) {%>
+                    <input type="checkbox">
+                    <p><%= newadd[i] %></p>
+                <% } %>
+
+            </div>
+    
+        </div>
+        <form class="item" method="post" action="/">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+        
+    </div>
+<%- include("footer.ejs"); -%>  
+  
